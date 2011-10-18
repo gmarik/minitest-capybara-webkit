@@ -6,6 +6,7 @@ Rake::TestTask.new(:spec) do |t|
 end
 
 namespace :webkit do
+  desc "helper task to build Qt-WebKit"
   task 'install' => 'build'
 
   task 'build' do
