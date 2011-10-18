@@ -1,3 +1,10 @@
+require 'rake/testtask'
+
+Rake::TestTask.new(:spec) do |t|
+  t.libs.push "test"
+  t.test_files = FileList['test/**/*_spec.rb']
+end
+
 namespace :webkit do
   task 'install' => 'build'
 
