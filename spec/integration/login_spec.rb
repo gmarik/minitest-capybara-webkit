@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'spec_helper'
 
 describe 'Logging integration' do
   it 'logs you in with valid user/pass' do

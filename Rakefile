@@ -1,8 +1,10 @@
 require 'rake/testtask'
 
+task :default => :spec
+
 Rake::TestTask.new(:spec) do |t|
-  t.libs.push "test"
-  t.test_files = FileList['test/**/*_spec.rb']
+  t.libs.push "spec"
+  t.test_files = FileList['spec/**/*_spec.rb']
 end
 
 namespace :webkit do
