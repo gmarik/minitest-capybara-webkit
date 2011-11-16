@@ -19,3 +19,15 @@ World(MiniTest::Assertions)
 World(Capybara::DSL)
 MiniTest::Spec.new(nil)
 
+module IntegrationHelpers
+  def login(user = 'autotest', pass = 'autotest')
+    reset_session!
+    visit '/'
+    fill_in 'session_login', with: user
+    fill_in 'session_password', with: pass
+    click_button 'Log in'
+  end
+end
+
+World(IntegrationHelpers)
+
