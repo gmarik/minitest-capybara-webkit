@@ -6,8 +6,6 @@ require 'capybara'
 require 'capybara/cucumber'
 require 'capybara/webkit'
 
-# use IntegrationSpec class for all scenarious having integration$ as description
-
 Capybara.app_host = 'http://localhost:3000'
 Capybara.default_driver = :webkit
 Capybara.default_selector = :css
